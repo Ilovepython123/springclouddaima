@@ -9,7 +9,8 @@
         <module>product1_service</module>
         <module>order_service</module>
         <module>eureka_server1</module>
-<!--        <module>eureka_server1</module>-->
+        <module>eureka_server3</module>
+        <!--        <module>eureka_server1</module>-->
     </modules>
     <parent>
         <groupId>org.springframework.boot</groupId>
@@ -48,6 +49,10 @@
             <artifactId>lombok</artifactId>
             <version>1.18.4</version>
             <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-netflix-eureka-server</artifactId>
         </dependency>
     </dependencies>
     <dependencyManagement>
