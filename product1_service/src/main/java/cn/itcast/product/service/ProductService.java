@@ -21,4 +21,6 @@ public interface ProductService {
 	 * 删除
 	 */
 	void delete(Long id);
+
+	public void test();
 }

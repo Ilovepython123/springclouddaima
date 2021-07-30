@@ -31,4 +31,11 @@ public class ProductController {
 		productService.save(product);
 		return "保存成功";
 	}
+
+
+	@RequestMapping(value = "123",method = RequestMethod.POST)
+	public String test() {
+		productService.test();
+		return "保存成功";
+	}
 }
