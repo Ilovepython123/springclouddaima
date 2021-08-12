@@ -12,10 +12,17 @@ spring:
     database: MySQL
     show-sql: true
     open-in-view: true
+mybatis-plus:
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+  mapper-locations: classpath:/xml/*.xml
+  global-config:
+    db-config:
+      id-type: id_worker_str
 #配置Eureka
-eureka:
-  client:
-    service-url:
-      defaultZone: http://localhost:8761/eureka/    #多个eurekaserver之间用,隔开
-  instance:
-    prefer-ip-address: true #使用ip地址注册
+#eureka:
+#  client:
+#    service-url:
+#      defaultZone: http://localhost:8761/eureka/    #多个eurekaserver之间用,隔开
+#  instance:
+#    prefer-ip-address: true #使用ip地址注册

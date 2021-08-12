@@ -10,4 +10,4 @@ eureka:
 #    registerWithEureka: false #是否将自己注册到注册中心
 #    fetchRegistry: false #是否从eureka中获取注册信息
     serviceUrl:
-      defaultZone: http://127.0.0.1:8762/eureka/
+      defaultZone: http://127.0.0.1:8761/eureka/
