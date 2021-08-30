@@ -1,8 +1,10 @@
 package cn.itcast.product.service;
 
 import cn.itcast.product.entity.Product;
+import cn.itcast.product.entity.danwei.User;
+import com.baomidou.mybatisplus.extension.service.IService;
 
-public interface ProductService {
+public interface ProductService extends IService<User> {
 
 	/**
 	 * 根据id查询

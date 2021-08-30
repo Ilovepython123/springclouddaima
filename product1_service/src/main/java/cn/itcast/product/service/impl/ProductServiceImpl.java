@@ -3,25 +3,18 @@ package cn.itcast.product.service.impl;
 import cn.itcast.product.dao.ProductDao;
 import cn.itcast.product.dao.UserMapper;
 import cn.itcast.product.entity.Product;
-import cn.itcast.product.entity.User;
+import cn.itcast.product.entity.danwei.User;
 import cn.itcast.product.service.ProductService;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
-import com.baomidou.mybatisplus.core.metadata.IPage;
-import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
-import com.ctc.wstx.util.StringUtil;
-import com.mysql.fabric.xmlrpc.base.Param;
-import org.apache.commons.lang.StringUtils;
+import com.baomidou.mybatisplus.core.mapper.BaseMapper;
+import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.util.Arrays;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
-import java.util.function.Consumer;
 
 @Service
-public class ProductServiceImpl implements ProductService {
+public class ProductServiceImpl  extends ServiceImpl<UserMapper,User> implements ProductService  {
 
 	@Autowired
 	private ProductDao productDao;
@@ -52,6 +45,21 @@ public class ProductServiceImpl implements ProductService {
 //		queryWrapper.like("name","an").between("age",20,40).isNotNull("email");
 //		List<User> list = userMapper.selectAll(queryWrapper);
 //		System.out.println(list);
+
+//		int i = userMapper.deleteById("1422374343481466884");
+//		System.out.println(i);
+
+		QueryWrapper<User> queryWrapper = new QueryWrapper<User>();
+		List<User> list = userMapper.selectList(queryWrapper);
+		System.out.println(list);
+//		Integer version = 2;
+//
+//		User user = new User();
+//		user.setUserId("1427105063533772802");
+//		user.setAge(101);
+//		user.setVersion(version);
+//		int i = userMapper.updateById(user);
+//		System.out.println(i);
 //
 //
 //
@@ -134,7 +142,7 @@ public class ProductServiceImpl implements ProductService {
 //		User user = new User();
 ////		user.setId(6l);
 //		user.setAge(31);
-//		user.setRealName("lihuan");
+//		user.setName("tianfei");
 //		int insert = userMapper.insert(user);
 //		System.out.println(insert);
 
@@ -149,12 +157,12 @@ public class ProductServiceImpl implements ProductService {
 //		System.out.println("记录"+iPage.getRecords());
 
 
-		//更新
-		User user = new User();
-//		user.setUserId(1422374343481466885L);
-		user.setName("hfrtjhfdjffdjfj");
-		int i = userMapper.insert(user);
-		System.out.println(i);
+//		//更新
+//		User user = new User();
+////		user.setUserId(1422374343481466885L);
+//		user.setName("hfrtjhfdjffdjfj");
+//		int i = userMapper.insert(user);
+//		System.out.println(i);
 
 
 

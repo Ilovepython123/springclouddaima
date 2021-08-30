@@ -19,6 +19,8 @@ mybatis-plus:
   global-config:
     db-config:
       id-type: id_worker_str
+      logic-not-delete-value: 0
+      login-delete-value: 1
 #配置Eureka
 #eureka:
 #  client:

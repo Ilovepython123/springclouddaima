@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="cn.itcast.product.dao.UserMapper">
-    <select id="selectAll" resultType="cn.itcast.product.entity.User">
+    <select id="selectAll" resultType="cn.itcast.product.entity.danwei.User">
         select * from user_id ${ew.customSqlSegment}
     </select>
 
 
-    <select id="selectshuangbiao" resultType="cn.itcast.product.entity.User">
+    <select id="selectshuangbiao" resultType="cn.itcast.product.entity.danwei.User">
         SELECT * FROM `user_id`  z LEFT JOIN tb_user c ON c.userid = z.user_id
     </select>
 

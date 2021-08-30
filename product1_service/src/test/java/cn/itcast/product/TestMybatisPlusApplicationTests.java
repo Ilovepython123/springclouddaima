@@ -2,7 +2,7 @@ package cn.itcast.product;
 
 import cn.itcast.product.dao.ProductDao;
 import cn.itcast.product.dao.UserMapper;
-import cn.itcast.product.entity.User;
+import cn.itcast.product.entity.danwei.User;
 import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
