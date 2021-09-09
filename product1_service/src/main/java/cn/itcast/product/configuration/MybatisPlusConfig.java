@@ -91,6 +91,14 @@ public class MybatisPlusConfig {
     }
 
 
+    /**
+     * @Author lihuan
+     * @Description //TODO 
+     * @Date 16:56 2021/9/9
+     * @Param []
+     * @return org.springframework.aop.interceptor.PerformanceMonitorInterceptor
+     **/
+    
     @Bean
     @Profile({"dev","test"})
     public PerformanceMonitorInterceptor performanceMonitorInterceptor(){
