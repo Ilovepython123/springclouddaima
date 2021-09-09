@@ -1,5 +1,6 @@
 package cn.itcast.product.service.impl;
 
+import cn.itcast.product.configuration.MybatisPlusConfig;
 import cn.itcast.product.dao.ProductDao;
 import cn.itcast.product.dao.UserMapper;
 import cn.itcast.product.entity.Product;
@@ -7,6 +8,8 @@ import cn.itcast.product.entity.danwei.User;
 import cn.itcast.product.service.ProductService;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
+import com.baomidou.mybatisplus.core.metadata.IPage;
+import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -49,7 +52,11 @@ public class ProductServiceImpl  extends ServiceImpl<UserMapper,User> implements
 //		int i = userMapper.deleteById("1422374343481466884");
 //		System.out.println(i);
 
+		System.out.println("asd");
+		MybatisPlusConfig.myTableName.set("user_2019");
 		QueryWrapper<User> queryWrapper = new QueryWrapper<User>();
+		queryWrapper.like("name","li");
+//				.lt("age",40);
 		List<User> list = userMapper.selectList(queryWrapper);
 		System.out.println(list);
 //		Integer version = 2;
@@ -57,7 +64,7 @@ public class ProductServiceImpl  extends ServiceImpl<UserMapper,User> implements
 //		User user = new User();
 //		user.setUserId("1427105063533772802");
 //		user.setAge(101);
-//		user.setVersion(version);
+////		user.setVersion(version);
 //		int i = userMapper.updateById(user);
 //		System.out.println(i);
 //
@@ -147,7 +154,7 @@ public class ProductServiceImpl  extends ServiceImpl<UserMapper,User> implements
 //		System.out.println(insert);
 
 
-		//分页
+//		分页
 //		QueryWrapper<User> queryWrapper = new QueryWrapper<>();
 //		queryWrapper.lt("age",47);
 //		Page<User> page = new Page<User>(1,6);
